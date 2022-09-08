@@ -9,18 +9,8 @@
 
 <div class="text-center">
     <form asp-controller="Calculate" asp-action="Calc" method="post">
-        <input 
-        type="text" 
-        asp-controller="Calculate" 
-        asp-action="Calc" 
-        name="FirstNumber" 
-        placeholder="Input first number"/>
-        <input 
-        type="text" 
-        asp-controller="Calculate" 
-        asp-action="Calc" 
-        name="SecondNumber" 
-        placeholder="Input Second number"/>
+        <input type="text" name="FirstNumber" placeholder="Input first number"/>
+        <input type="text" name="SecondNumber" placeholder="Input Second number"/>
         <button type="submit">Calculate</button>
     </form>
 </div>
@@ -30,7 +20,7 @@
         {
             <div class="text-center">
                 @{
-                        if (ViewBag.firstSqrt > ViewBag.secondSqrt)
+                        if (@ViewBag.firstSqrt > @ViewBag.secondSqrt)
                             {
                                 <h3 class="text-success">
                                 The number @ViewBag.first with Square root @ViewBag.firstSqrt
@@ -39,7 +29,7 @@
                                 </h3>
 
                             }
-                            else if (ViewBag.secondSqrt > ViewBag.firstSqrt)
+                            else if (@ViewBag.secondSqrt > @ViewBag.firstSqrt)
                             {
                                 <h3 class="text-success">
                                 The number @ViewBag.second with Square root @ViewBag.secondSqrt
@@ -47,7 +37,7 @@
                                 @ViewBag.firstSqrt
                                 </h3>
                             }
-                            else if (ViewBag.secondSqrt == ViewBag.firstSqrt)
+                            else if (@ViewBag.firstSqrt == @ViewBag.secondSqrt)
                             {
                                 <h3 class="text-success">
                                     The number @ViewBag.first with Square root @ViewBag.firstSqrt

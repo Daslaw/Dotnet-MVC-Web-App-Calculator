@@ -6,7 +6,6 @@ namespace new_project.Controllers;
 
 public class CalculateController : Controller
 {
-    [HttpGet]
 
     public IActionResult Calc()
     {
